@@ -1,0 +1,16 @@
+<taglib>
+    <tlib-version>1.0</tlib-version>
+    <short-name>Example TLD</short-name>
+    <jsp-version>5.5</jsp-version>
+
+    <tag>
+        <name>Hello</name>
+        <tag-class>by.training.HelloTag</tag-class>
+        <body-content>scriptless</body-content>
+        
+        <attribute>
+            <name>color</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+</taglib>
