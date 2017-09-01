@@ -4,25 +4,28 @@
 <head>
     <title>CSS Tutorial</title>
     <link rel="stylesheet" href="style/style.css" type="text/css" media="all"/>
-    <style type="text/css">
-
-        h2 {
-            color: #a67;
-        }
-
-    </style>
 
 </head>
 <body>
     <h2>CSS Tutorialspoint.com</h2>
 
+    <ul class="list">
+        <li>BMW</li>
+        <li>Volvo</li>
+        <li>Renault</li>
+        <li>Honda</li>
+    </ul>
+
+
+    <p id="dimension">Dimension sdfdsf asdf dsf asdf df dsf asdf das freggs sg sg sgf sf gsg fg gs g s</p>
+    <p id="p3">OutLine</p>
     <p id="p1">Something text</p>
     <p id="p2">Something text</p>
 
 
 
     <a class="linkExample" href="#">Link Example</a>
-    <a class="linkExample" href="1111#">Link Example</a>
+    <a class="linkExample" href="#">Link Example</a>
 
 
     <p id="fontExample">Example text</p>

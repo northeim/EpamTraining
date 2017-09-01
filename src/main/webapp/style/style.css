@@ -1,3 +1,29 @@
+
+p#dimension {
+    border: dotted black 1px;
+    width: 100px;
+    height: 150px;
+    line-height: 30px;
+    overflow: auto;
+    visibility: visible;
+}
+
+ul.list {
+    list-style: outside square;
+    marker-offset: 2cm;
+    border: 1px black dotted;
+    cursor: crosshair;
+}
+
+ul.list li {
+    padding: 5px 5px 10px 10px;
+}
+
+p#p3 {
+    outline: dotted black medium;
+    border: dotted black medium;
+}
+
 p#p1 {
     border: 1px solid black;
     margin-top: 10px;
