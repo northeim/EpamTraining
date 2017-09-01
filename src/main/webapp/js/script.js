@@ -16,4 +16,41 @@ function onReadyPage() {
     document.getElementById("demo").innerHTML = txt + JSON.stringify(objectJ) + JSON.stringify(obj);
 }
 
+function getAjaxObj() {
 
+    var ajaxRequest;
+
+    try {
+        ajaxRequest = new XMLHttpRequest();
+    } catch (e) {
+        try {
+            ajaxRequest = ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            try {
+                ajaxRequest = ActiveXObject("Microsoft.XMLHTTP");
+            } catch (e) {
+                ajaxRequest = null;
+            }
+        }
+    }
+    return ajaxRequest;
+}
+
+function validateInput() {
+    var ajaxRequest = getAjaxObj();
+    var inNumberValue = document.getElementById("inNumber").value;
+    var url = "/test?inNumber=" + inNumberValue;
+    ajaxRequest.onreadystatechange = processRequest;
+    ajaxRequest.open("GET", url, true);
+    ajaxRequest.send(null);
+}
+
+function processRequest() {
+    if (this.readyState == 4 && this.status == 200) {
+        var txt = "";
+        txt += this.getAllResponseHeaders() + "<br>";
+        txt += this.responseText;
+
+        document.getElementById("ajaxResult").innerHTML = txt;
+    }
+}

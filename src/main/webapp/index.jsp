@@ -40,6 +40,11 @@
         <input type="submit" value="UpLoad"/>
     </form>
 
+    <h4>AJAX example</h4>
+    <form>
+        <input id="inNumber" type="number" onkeyup="validateInput()">
+    </form>
+    <p id="ajaxResult"></p>
 
 </body>
 </html>
