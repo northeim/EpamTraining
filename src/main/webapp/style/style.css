@@ -1,3 +1,129 @@
+@import "other.css";
+@charset "UTF-8";
+
+
+
+
+
+
+
+.multi {
+    column-count: 4;
+    column-gap: 50px;
+    resize: both;
+    overflow: auto;
+    border: 2px solid black;
+}
+
+
+@keyframes animationColor {
+    from {background-color: white}
+    to {background-color: black}
+}
+
+div.anime {
+    width: 300px;
+    height: 300px;
+    background-color: red;
+    animation-name: animationColor;
+    animation-duration: 10s;
+    resize: both;
+}
+
+div.d2 {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+    position: static;
+    left: 0px;
+    top: 0px;
+}
+
+div.d2#transform {
+    transform: rotate(-20deg);
+}
+
+div.d2#transform3 {
+    transform: rotateY(90deg);
+}
+
+
+
+
+p.shad {
+    text-shadow: 0 0 50px red;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 500px;
+}
+
+
+
+p.grad {
+    background: linear-gradient(to right, green, red);
+    /*background: -webkit-linear-gradient(left, green, red);*/
+    height: 50px;
+}
+
+
+
+
+@media print {
+    body {
+        font-family: "Times New Roman";
+    }
+}
+
+@page  {
+    size: portrait;
+    orphans: 4;
+    widows: 2;
+}
+
+
+h2 {
+    border-radius: 25px;
+    border: 20px transparent solid;
+    position: static;
+    background: #ff324d;
+    color: #000;
+    font-weight: bold;
+    border-image-source: url("/img/image001.jpg");
+    border-image-repeat: round;
+    border-image-slice: 30;
+    border-image-width: 20px;
+
+}
+
+
+p.pseudo {
+    background: blue;
+    filter: alpha(
+        opacity=100,
+        finishopacity=0,
+        style=2,
+        startx=0,
+        starty=0,
+        finishx=40,
+        finishy=40
+    );
+}
+
+p.pseudo:first-line {
+    text-decoration: line-through !important;
+}
+
+p.pseudo:first-line {
+    text-decoration: none;
+}
+
+p.pseudo:before {
+    content: "sdfdfdf";
+}
+
+
+
 
 p#dimension {
     border: dotted black 1px;
@@ -8,11 +134,17 @@ p#dimension {
     visibility: visible;
 }
 
+ul.list:before {
+    clear: both;
+}
+
 ul.list {
     list-style: outside square;
     marker-offset: 2cm;
     border: 1px black dotted;
     cursor: crosshair;
+    position: relative;
+
 }
 
 ul.list li {
@@ -52,21 +184,29 @@ a:hover.linkExample {
 
 
 img#imgExample {
-    width: 100px;
+    width: 200px;
     border: 1px dashed blue;
     -moz-opacity: 0.3;
+    position: static;
+    top: 5px;
+    left: 0px;
+    filter: alpha(
+    opacity=100,
+    finishopacity=0,
+    startx=0,
+    starty=0,
+    finishx=40,
+    finishy=40,
+    style=2);
+    border-radius: 5px 10px 20px;
 }
 
 body {
     font-family: "Comic Sans MS";
     background: url("../img/image001.jpg") no-repeat 100px 600px fixed;
+
 }
 
-h2 {
-    color: #000;
-    font-weight: bold;
-    margin-left: 40px;
-}
 
 table, td {
     border: 1px solid black;
