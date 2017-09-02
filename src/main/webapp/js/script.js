@@ -54,3 +54,21 @@ function processRequest() {
         document.getElementById("ajaxResult").innerHTML = txt;
     }
 }
+
+var deg = 0;
+
+function rotate() {
+    var element1 = document.getElementById("default");
+    var element2 = document.getElementById("transform3");
+
+    if (deg >= 90) {
+        deg = 0;
+    } else {
+        deg += 90;
+    }
+
+
+
+    element1.style.transform = "rotateY("+deg+"deg)";
+    element2.style.transform = "rotateY("+(deg-90) +"deg)";
+}
